@@ -1,0 +1,110 @@
+.homepage-main {
+  background-color: #1A1A23;
+  color: white;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  overflow: visible;
+}
+
+.homepage-text {
+  justify-self: start;
+  align-self: center;
+  max-width: 580px;
+  text-align: left;
+}
+
+.homepage-text h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  margin: 10px 0;
+}
+
+.homepage-text h3 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin: 4px 0;
+  color: #c5c9d9;
+}
+
+.homepage-text p {
+  font-size: 1rem;
+  color: #d6d9e8;
+  line-height: 1.55;
+  margin-top: 12px;
+  max-width: 520px;
+}
+
+.homepage-image {
+  justify-self: end;
+  align-self: end;
+  display: flex;
+  align-items: flex-end;
+}
+
+.homepage-image img {
+  width: 115%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 24px;
+  background-color: #617B8E;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: gray;
+  transform: translateY(-2px);
+}
+
+.divider {
+  height: 64px;
+}
+
+@media (max-width: 900px) {
+  .homepage-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .divider {
+    height: 110px;
+  }
+
+  .homepage-text {
+    max-width: 640px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .homepage-image {
+    display: normal;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .homepage-image img {
+    display: block;
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+  }
+}

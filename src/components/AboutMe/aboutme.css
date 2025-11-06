@@ -1,0 +1,90 @@
+.aboutme-back {
+  background: linear-gradient(180deg, #f9f9f9 0%, #f3f3f7 100%);
+  color: #222;
+  padding: 100px 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.aboutme-main.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.aboutme-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #111;
+  text-align: left;
+  letter-spacing: 0.3px;
+}
+
+.aboutme-text {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.aboutme-text p {
+  line-height: 1.75;
+  color: #3a3a44;
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  margin-bottom: 20px;
+}
+
+.aboutme-video {
+  width: 100%;
+  height: clamp(240px, 30vw, 340px);
+  background: #fff;
+  border: 1px solid #e7e7f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(15,18,33,.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-style: italic;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutme-video::before {
+  position: absolute;
+  font-size: 28px;
+  right: 14px;
+  bottom: 12px;
+  opacity: .35;
+}
+
+.aboutme-back::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -28px;
+  width: 100%;
+  height: 56px;
+  border-radius: 28px;
+  background: radial-gradient(120% 100% at 50% -10%, rgba(0,0,0,0.06), rgba(0,0,0,0) 70%);
+  filter: blur(10px);
+  opacity: .6;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .aboutme-main.vertical {
+    text-align: left;
+    align-items: center;
+  }
+
+  .aboutme-video {
+    height: 220px;
+    margin-top: 30px;
+  }
+}
+
